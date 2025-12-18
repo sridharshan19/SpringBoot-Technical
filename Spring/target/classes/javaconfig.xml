@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Engine Bean -->
+    <bean id="St1" class="org.spring.Engine" />
+    <bean id="bt1" class="org.spring.Battery" />
+    <!-- Bike Bean -->
+    <bean id="b1" class="org.spring.Bike">
+   <!--     <property name="age" value="30" />
+        <property name="roll_no" value="100" />-->
+        <property name="v" ref="bt1" />
+    </bean>
+</beans>
